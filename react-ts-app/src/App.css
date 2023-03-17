@@ -4,23 +4,31 @@
   flex-direction: column;
 }
 
-.wrapper {
+.navigate {
   background: #2b2d42;
   background: linear-gradient(180deg, #2b2d42 0%, #8d99ae 100%);
   padding: 0 2rem;
 }
 
-.navigate {
+.navigate-list {
   max-width: 1280px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.navigate li:first-child {
+.navigate-list li:first-child {
   margin-right: 2rem;
 }
 
-.navigate a {
+.navigate-list a {
   font-size: 2rem;
+}
+
+.wrapper-no-match {
+  max-width: 80%;
+  margin: 1rem auto;
+  border-radius: 50%;
+  background: #e0aaff;
+  background: radial-gradient(circle, #e0aaff 0%, #edf2f4 80%);
 }

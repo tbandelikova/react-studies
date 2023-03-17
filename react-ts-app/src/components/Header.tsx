@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div className="wrapper">
-      <ul className="navigate">
+    <div className="navigate">
+      <ul className="navigate-list">
         <li>
           <Link to="/">Home</Link>
         </li>
