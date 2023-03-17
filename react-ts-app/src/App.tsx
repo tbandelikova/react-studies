@@ -4,12 +4,13 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import NoMatch from './pages/NoMatch';
+import Header from './components/Header';
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello world!</h1>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -1,7 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.wrapper {
+  background: #2b2d42;
+  background: linear-gradient(180deg, #2b2d42 0%, #8d99ae 100%);
+  padding: 0 2rem;
+}
+
+.navigate {
+  max-width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigate li:first-child {
+  margin-right: 2rem;
+}
+
+.navigate a {
+  font-size: 2rem;
+}
