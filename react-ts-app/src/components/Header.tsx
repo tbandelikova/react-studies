@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div className="navigate">
+    <header className="navigate">
       <h1>RS School - React. Components</h1>
       <ul className="navigate-list">
         <li>
@@ -12,6 +12,6 @@ export default function Header() {
           <Link to="/about">About Us</Link>
         </li>
       </ul>
-    </div>
+    </header>
   );
 }

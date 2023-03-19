@@ -23,7 +23,7 @@ class Home extends Component<Props, { value: string }> {
 
   handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    console.log(`You clicked search. ${data[0].tags}`);
+    console.log(`You clicked search.`);
   }
 
   componentWillUnmount() {
@@ -39,21 +39,23 @@ class Home extends Component<Props, { value: string }> {
     const { value } = this.state;
 
     return (
-      <div className="wrapper">
-        <form className="search-form" onSubmit={this.handleSubmit}>
-          <label>
-            <input type="text" value={value} onChange={this.handleChange} />
-          </label>
-          <button className="search-button" type="submit">
-            Search
-          </button>
-        </form>
-        <div className="cards">
-          {data.map((card) => (
-            <Card {...card} key={card.id} />
-          ))}
+      <main>
+        <div className="wrapper">
+          <form className="search-form" onSubmit={this.handleSubmit}>
+            <label>
+              <input type="text" value={value} onChange={this.handleChange} />
+            </label>
+            <button className="search-button" type="submit">
+              Search
+            </button>
+          </form>
+          <div className="cards">
+            {data.map((card) => (
+              <Card {...card} key={card.id} />
+            ))}
+          </div>
         </div>
-      </div>
+      </main>
     );
   }
 }
