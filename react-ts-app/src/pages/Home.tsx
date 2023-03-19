@@ -36,21 +36,22 @@ class Home extends Component<Props, { value: string }> {
   }
 
   render() {
+    const { value } = this.state;
+
     return (
       <div className="wrapper">
         <form className="search-form" onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={value} onChange={this.handleChange} />
           </label>
           <button className="search-button" type="submit">
             Search
           </button>
         </form>
         <div className="cards">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {data.map((card) => (
+            <Card {...card} key={card.id} />
+          ))}
         </div>
       </div>
     );
