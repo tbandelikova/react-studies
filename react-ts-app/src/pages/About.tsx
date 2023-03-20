@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
       <div className="wrapper">
-        <p>Welcome to React!</p>;
+        <p>Welcome to React!</p>
       </div>
     );
   }
