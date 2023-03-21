@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <main>
-        <div className="wrapper">
+        <div className="wrapper center-column">
           <SearchBar />
           <div className="cards">
             {data.map((card) => (
