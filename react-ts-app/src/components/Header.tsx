@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -6,13 +6,13 @@ export default function Header() {
       <h1>RS School - React.</h1>
       <ul className="navigate-list">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/forms">Forms</Link>
+          <NavLink to="/forms">Forms</NavLink>
         </li>
         <li>
-          <Link to="/about">About Us</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </header>
