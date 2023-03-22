@@ -1,45 +1,65 @@
 import React, { Component } from 'react';
+import InputDate from '../components/InputDate';
+import InputFile from '../components/InputFile';
+import InputSelect from '../components/InputSelect';
+import InputSubmit from '../components/InputSubmit';
+import InputSwitch from '../components/InputSwitch';
+import InputText from '../components/InputText';
 
-class Forms extends Component {
+// const inputs = ['InputText', 'InputText', 'InputText', 'InputText']
+
+type FormState = {
+  inputText: string;
+  inputDate: string;
+  inputSelect: string;
+  inputSwitchMale: boolean;
+  inputSwitchFemale: boolean;
+  showData: object;
+};
+
+class Forms extends Component<FormState> {
+  state = {
+    inputText: '',
+    inputDate: '',
+    inputSelect: '',
+    inputSwitchMale: false,
+    inputSwitchFemale: false,
+    showData: {},
+  };
+
+  inputTextRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputDateRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputSelectRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputSwitchMRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputSwitchFRef: React.RefObject<HTMLInputElement> = React.createRef();
+
+  handleChange() {
+    this.setState({
+      inputText: this.inputTextRef.current.value,
+      inputDate: this.inputDateRef.current.value,
+      inputSelect: this.inputDateRef.current.value,
+      inputSwitchMale: this.inputDateRef.current.checked,
+      inputSwitchFemale: this.inputDateRef.current.checked,
+    });
+  }
+
+  handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
+    event.preventDefault();
+    console.log(`You clicked send. ${this.state}`);
+  }
+
   render() {
     return (
       <main>
         <div className="wrapper two-columns">
           <div className="formcontainer">
             <form className="form" action="">
-              <div className="form-element">
-                <label htmlFor="textInput">Name:</label>
-                <input type="text" name="name" id="textInput" />
-              </div>
-              <div className="form-element">
-                <label htmlFor="dateInput">Birthday:</label>
-                <input type="date" name="date" id="dateInput" />
-              </div>
-              <div className="form-element">
-                <div className="switch">
-                  <input type="radio" id="male" name="sex" value="Male" />
-                  <label htmlFor="male">Male</label>
-                  <input type="radio" id="female" name="sex" value="Female" />
-                  <label htmlFor="female">Female</label>
-                </div>
-              </div>
-              <div className="form-element">
-                <label className="select" htmlFor="location">
-                  Current location:
-                  <select>
-                    <option value="Belarus">Belarus</option>
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="Poland">Poland</option>
-                    <option value="Lithuania">Lithuania</option>
-                  </select>
-                </label>
-              </div>
-              <div className="form-element">
-                <input className="file" type="file" accept="image/*" />
-              </div>
-              <div className="form-element form-submit">
-                <input className="submit" type="submit" value="Send" />
-              </div>
+              <InputText />
+              <InputDate />
+              <InputSwitch />
+              <InputSelect />
+              <InputFile />
+              <InputSubmit />
             </form>
           </div>
           <div className="form-cards">Card here</div>
