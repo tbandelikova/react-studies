@@ -5,13 +5,13 @@ import Home from './pages/Home';
 import Forms from './pages/Forms';
 import About from './pages/About';
 import NoMatch from './pages/NoMatch';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/forms" element={<Forms />} />

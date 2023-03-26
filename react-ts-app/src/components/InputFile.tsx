@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, ForwardedRef } from 'react';
 
-class InputFile extends Component {
+type PropWithRef = {
+  inputFileRef: ForwardedRef<HTMLInputElement>;
+};
+
+class InputF extends Component<PropWithRef> {
   render() {
-    return (
-      <div className="form-element">
-        <input className="file" type="file" accept="image/*" />
-      </div>
-    );
+    const { inputFileRef } = this.props;
+    return <input className="file" type="file" accept="image/*" ref={inputFileRef} />;
   }
 }
 
-export default InputFile;
+export const InputFile = React.forwardRef<HTMLInputElement>((props, ref) => (
+  <InputF inputFileRef={ref} {...props} />
+));

@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, ForwardedRef } from 'react';
 
-class InputDate extends Component {
+type PropWithRef = {
+  inputDateRef: ForwardedRef<HTMLInputElement>;
+};
+
+class InputD extends Component<PropWithRef> {
   render() {
-    return (
-      <div className="form-element">
-        <label htmlFor="dateInput">Birthday:</label>
-        <input type="date" name="date" id="dateInput" />
-      </div>
-    );
+    const { inputDateRef } = this.props;
+    return <input type="date" name="date" id="dateInput" ref={inputDateRef} required={true} />;
   }
 }
 
-export default InputDate;
+export const InputDate = React.forwardRef<HTMLInputElement>((props, ref) => (
+  <InputD inputDateRef={ref} {...props} />
+));

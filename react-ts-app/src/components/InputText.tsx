@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, ForwardedRef } from 'react';
 
-class InputText extends Component {
+type PropWithRef = {
+  inputTextRef: ForwardedRef<HTMLInputElement>;
+};
+
+class InputT extends Component<PropWithRef> {
   render() {
-    return (
-      <div className="form-element">
-        <label htmlFor="textInput">Name:</label>
-        <input type="text" name="name" id="textInput" />
-      </div>
-    );
+    const { inputTextRef } = this.props;
+    return <input type="text" name="name" id="textInput" ref={inputTextRef} required={true} />;
   }
 }
 
-export default InputText;
+export const InputText = React.forwardRef<HTMLInputElement>((props, ref) => (
+  <InputT inputTextRef={ref} {...props} />
+));

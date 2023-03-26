@@ -54,7 +54,7 @@
 .cards {
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
@@ -63,6 +63,7 @@
 /* Card component */
 .card {
   flex-basis: 30%;
+  min-width: 19rem;
   border-radius: 1rem;
   border: 1px dashed #2b2d42;
   padding: 1rem;
@@ -111,6 +112,7 @@
 
 /* Forms page */
 .formcontainer {
+  min-width: 35rem;
   border-radius: 1rem;
   border: 1px dashed #2b2d42;
   padding: 1rem;
@@ -155,7 +157,6 @@
   padding: 0.5rem 0;
   margin-right: -1px;
   border: 1px solid #00000033;
-  /* box-shadow: inset 0 1px 5px 0 5px #ffffff1a; */
   box-shadow: inset -3px 0px 1px 1px #42445a;
 	transition: all 0.3s ease-in-out;
 }
@@ -229,8 +230,10 @@
 }
 
 .form-cards {
+  width: 100%;
+  margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -238,7 +241,7 @@
 /* NoMatch page */
 .wrapper-no-match {
   max-width: 80%;
-  margin: 1rem auto;
+  margin: 5rem auto;
   border-radius: 50%;
   background: #e0aaff;
   background: radial-gradient(circle, #e0aaff 0%, #fefae0 80%);
