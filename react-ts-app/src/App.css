@@ -178,6 +178,12 @@
 	box-shadow: none;
 }
 
+.check {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: 1rem;
+}
+
 .file {
   width: 9rem;
   border: none;

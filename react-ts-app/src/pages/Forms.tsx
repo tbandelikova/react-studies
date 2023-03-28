@@ -4,6 +4,7 @@ import { InputDate } from '../components/InputDate';
 import { InputFile } from '../components/InputFile';
 import { InputSelect } from '../components/InputSelect';
 import { InputSwitch } from '../components/InputSwitch';
+import { InputCheckbox } from '../components/InputCheckbox';
 import Header from '../components/Header';
 import CardUser from '../components/CardUser';
 
@@ -21,6 +22,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
   inputSelectRef: React.RefObject<HTMLSelectElement>;
   inputSwitchRef: React.RefObject<HTMLInputElement>;
   inputFileRef: React.RefObject<HTMLInputElement>;
+  inputCheckRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: object) {
     super(props);
@@ -33,6 +35,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
     this.inputDateRef = React.createRef<HTMLInputElement>();
     this.inputSelectRef = React.createRef<HTMLSelectElement>();
     this.inputSwitchRef = React.createRef<HTMLInputElement>();
+    this.inputCheckRef = React.createRef<HTMLInputElement>();
     this.inputFileRef = React.createRef<HTMLInputElement>();
   }
 
@@ -42,6 +45,9 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
     let imgSrc;
     if (image) {
       imgSrc = window.URL.createObjectURL(image);
+    }
+    if (!this.inputCheckRef.current?.checked) {
+      return alert('Make concent to your personal data');
     }
     const userData = {
       name: this.inputTextRef.current ? this.inputTextRef.current.value : '',
@@ -79,6 +85,9 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
                 </div>
                 <div className="form-element">
                   <InputFile ref={this.inputFileRef} />
+                </div>
+                <div className="form-element">
+                  <InputCheckbox ref={this.inputCheckRef} />
                 </div>
                 <div className="form-element form-submit">
                   <input className="submit" type="submit" value="Send" />
