@@ -23,6 +23,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
   inputSwitchRef: React.RefObject<HTMLInputElement>;
   inputFileRef: React.RefObject<HTMLInputElement>;
   inputCheckRef: React.RefObject<HTMLInputElement>;
+  ref: React.RefObject<HTMLFormElement>;
 
   constructor(props: object) {
     super(props);
@@ -31,6 +32,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 
+    this.ref = React.createRef<HTMLFormElement>();
     this.inputTextRef = React.createRef<HTMLInputElement>();
     this.inputDateRef = React.createRef<HTMLInputElement>();
     this.inputSelectRef = React.createRef<HTMLSelectElement>();
@@ -57,6 +59,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
       img: imgSrc ? imgSrc : 'src/assets/secondImg.svg',
     };
     this.setState({ data: [...this.state.data, userData] });
+    this.ref.current?.reset();
     alert(`Add user ${userData.name}`);
   }
 
@@ -68,7 +71,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
         <main>
           <div className="wrapper center-column">
             <div className="formcontainer">
-              <form className="form" onSubmit={this.handleSubmit} autoComplete="off">
+              <form className="form" ref={this.ref} onSubmit={this.handleSubmit} autoComplete="off">
                 <div className="form-element">
                   <label htmlFor="textInput">Name:</label>
                   <InputText ref={this.inputTextRef} />
