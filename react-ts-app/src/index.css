@@ -68,6 +68,11 @@ button:active {
   transform: translateY(3px);
 }
 
+label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 input {
   border-radius: 1rem;
   border: 1px dashed #2b2d42;
@@ -81,11 +86,31 @@ input:focus {
   outline: none;
 }
 
+select {
+  width: 10rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px dashed #2b2d42;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1280px;
   padding: 1rem;
   display: flex;
+}
+
+.center-column {
   flex-direction: column;
   align-items: center;
+}
+
+.two-columns {
+  justify-content: space-between;
+}
+
+.two-columns > * {
+  flex-basis: 49%;
 }

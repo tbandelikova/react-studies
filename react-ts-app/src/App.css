@@ -21,12 +21,17 @@
   align-items: center;
 }
 
-.navigate-list li:first-child {
+.navigate-list li:not(:last-child) {
   margin-right: 2rem;
 }
 
 .navigate-list a {
   font-size: 1.5rem;
+  transition: all .3s;
+}
+
+.navigate-list a.active {
+  color: #213547;
 }
 
 /* Home page */
@@ -49,7 +54,7 @@
 .cards {
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
@@ -58,6 +63,7 @@
 /* Card component */
 .card {
   flex-basis: 30%;
+  min-width: 19rem;
   border-radius: 1rem;
   border: 1px dashed #2b2d42;
   padding: 1rem;
@@ -104,10 +110,144 @@
   vertical-align: text-top;
 }
 
+/* Forms page */
+.formcontainer {
+  min-width: 35rem;
+  border-radius: 1rem;
+  border: 1px dashed #2b2d42;
+  padding: 1rem;
+  background: #eaac8b;
+  background: linear-gradient(180deg, #eaac8b 0%, #f1e8bd 100%);
+}
+
+.form {
+  min-height: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.form-element {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-element:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.form-submit {
+  justify-content: end;
+}
+
+.switch input {
+  width: 0;
+  height: 0;
+}
+
+.switch label {
+  display: inline-block;
+  width: 5rem;
+  background-color: #f3722c;
+  opacity: 0.6;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-right: -1px;
+  border: 1px solid #00000033;
+  box-shadow: inset -3px 0px 1px 1px #42445a;
+	transition: all 0.3s ease-in-out;
+}
+
+.switch label:first-of-type {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.switch label:last-of-type {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.switch label:hover {
+	cursor: pointer;
+}
+
+.switch input:checked + label {
+	opacity: 1;
+	box-shadow: none;
+}
+
+.check {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: 1rem;
+}
+
+.file {
+  width: 9rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: transparent;
+  padding: 0;
+  transition: all .3s;
+}
+
+.file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file::before {
+  content: 'Choose foto';
+  color: #2b2d42;
+  display: inline-block;
+  background: #f3722c;
+  background: linear-gradient(180deg, #f3722c 0%, #eaac8b 100%);
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.file:hover {
+  box-shadow: 0 5px 10px 0 #42445a;
+}
+
+.file:active,
+.submit:active {
+  transform: translateY(.3rem);
+}
+
+.submit {
+  width: 9rem;
+  background: #5a189a;
+  color: #fefae0;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .3s;
+  text-align: center;
+}
+
+.submit:hover {
+  background: #c77dff;
+}
+
+.form-cards {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 /* NoMatch page */
 .wrapper-no-match {
   max-width: 80%;
-  margin: 1rem auto;
+  margin: 5rem auto;
   border-radius: 50%;
   background: #e0aaff;
   background: radial-gradient(circle, #e0aaff 0%, #fefae0 80%);
