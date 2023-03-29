@@ -1,50 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { SearchPropsType } from '../types/types';
 
-type Props = {
-  value?: string;
-};
+export const SearchBar = function SearchBar(props: SearchPropsType) {
+  const [searchValue, setSearchValue] = useState(() => {
+    const initialValue = localStorage.getItem('searchValue') || '';
+    return initialValue;
+  });
 
-class SearchBar extends Component<Props, { value: string }> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      value: localStorage.getItem('searchValue') || '',
-    };
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSearchValue(event.target.value);
+    },
+    [searchValue]
+  );
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(`You clicked search.`);
-  }
+    props.search(searchValue);
+  };
 
-  componentWillUnmount() {
-    localStorage.setItem('searchValue', this.state.value);
-  }
+  useEffect(() => {
+    localStorage.setItem('searchValue', searchValue);
+  }, [searchValue]);
 
-  componentDidMount() {
-    const searchValue = localStorage.getItem('searchValue') || '';
-    this.setState({ value: searchValue });
-  }
-  render() {
-    const { value } = this.state;
-    return (
-      <form className="search-form" onSubmit={this.handleSubmit}>
-        <label>
-          <input type="text" value={value} onChange={this.handleChange} />
-        </label>
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
-    );
-  }
-}
-
-export default SearchBar;
+  return (
+    <form className="search-form" onSubmit={handleSubmit}>
+      <label>
+        <input type="text" value={searchValue} onChange={handleChange} />
+      </label>
+      <button className="btn search-button" type="submit">
+        Search
+      </button>
+    </form>
+  );
+};

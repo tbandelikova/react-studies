@@ -4,7 +4,7 @@
         "title": "Lorem",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -12,7 +12,7 @@
         "title": "Ipsum",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -20,7 +20,7 @@
         "title": "Dolor",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "dolor"]
     },
     {
@@ -28,7 +28,7 @@
         "title": "Sit Amet",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -36,7 +36,7 @@
         "title": "Consectetur",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem"]
     },
     {
@@ -44,7 +44,7 @@
         "title": "Adipisicing Elit",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -52,7 +52,7 @@
         "title": "Totam",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "dolor"]
     },
     {
@@ -60,7 +60,7 @@
         "title": "Cupiditate",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -68,7 +68,7 @@
         "title": "Aliquam",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -76,7 +76,7 @@
         "title": "Maxime",
         "img": "src/assets/firstImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -84,7 +84,7 @@
         "title": "Perferendis",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -92,7 +92,7 @@
         "title": "Nesciunt",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Ipsum", "dolor"]
     },
     {
@@ -100,7 +100,7 @@
         "title": "Rerum",
         "img": "src/assets/firstImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Ipsum", "dolor"]
     },
     {
@@ -108,7 +108,7 @@
         "title": "Reiciendis",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -116,7 +116,7 @@
         "title": "Laboriosam",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Ipsum", "dolor"]
     },
     {
@@ -124,7 +124,7 @@
         "title": "Lorem",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Ipsum", "dolor"]
     },
     {
@@ -132,7 +132,7 @@
         "title": "Mollitia",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -140,7 +140,7 @@
         "title": "Repudiandae Placeat",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -148,7 +148,7 @@
         "title": "Nihil",
         "img": "src/assets/firstImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -156,7 +156,7 @@
         "title": "Illo unde debitis",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -164,7 +164,7 @@
         "title": "Enim",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "dolor"]
     },
     {
@@ -172,7 +172,7 @@
         "title": "Dolor Sit",
         "img": "src/assets/firstImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -180,7 +180,7 @@
         "title": "Consectetur",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": [ "Ipsum", "dolor"]
     },
     {
@@ -188,7 +188,7 @@
         "title": "Totam et Sit",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -196,7 +196,7 @@
         "title": "Ipsum",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Ipsum", "dolor"]
     },
     {
@@ -204,7 +204,7 @@
         "title": "Lorem",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["dolor"]
     },
     {
@@ -212,7 +212,7 @@
         "title": "Aliquam",
         "img": "src/assets/thirdImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -220,7 +220,7 @@
         "title": "Lorem",
         "img": "src/assets/firstImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     },
     {
@@ -228,7 +228,7 @@
         "title": "Laboriosam",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum"]
     },
     {
@@ -236,7 +236,7 @@
         "title": "Mollitia",
         "img": "src/assets/secondImg.svg",
         "price": "100$",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam et sit cupiditate aliquam ut rem maxime perferendis nesciunt, rerum impedit? Reiciendis laboriosam mollitia repudiandae placeat! Nihil illo unde debitis enim.",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         "tags": ["Lorem", "Ipsum", "dolor"]
     }
 ]

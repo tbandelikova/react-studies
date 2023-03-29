@@ -5,7 +5,7 @@ import { InputFile } from '../components/InputFile';
 import { InputSelect } from '../components/InputSelect';
 import { InputSwitch } from '../components/InputSwitch';
 import { InputCheckbox } from '../components/InputCheckbox';
-import Header from '../components/Header';
+import { Header } from '../components/Header';
 import CardUser from '../components/CardUser';
 
 type CardProps = {
@@ -93,7 +93,7 @@ class Forms extends Component<object, { data: Array<CardProps> }> {
                   <InputCheckbox ref={this.inputCheckRef} />
                 </div>
                 <div className="form-element form-submit">
-                  <input className="submit" type="submit" value="Send" />
+                  <input className="btn submit" type="submit" value="Send" />
                 </div>
               </form>
             </div>
