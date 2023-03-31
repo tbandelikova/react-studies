@@ -1,12 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Header } from '../components/Header';
 import { SearchBar } from '../components/SearchBar';
 import { Card } from '../components/Card';
 import data from '../assets/data.json';
 import img from '../assets/nothing.svg';
+import { CardPropsType } from '../types/types';
 
 export const Home: React.FC = function Home() {
-  const [searchData, setSearchData] = useState(data);
+  const [searchData, setSearchData] = useState<Array<CardPropsType>>([]);
 
   const search = useCallback(
     (value: string) => {
@@ -16,9 +17,9 @@ export const Home: React.FC = function Home() {
     [searchData]
   );
 
-  useEffect(() => {
+  useMemo(() => {
     const saved = localStorage.getItem('searchValue') || '';
-    search(saved);
+    return search(saved);
   }, []);
 
   return (
