@@ -1,16 +1,12 @@
-import { Component } from 'react';
 import { Header } from '../components/Header';
 
-class About extends Component {
-  render() {
-    return (
-      <>
-        <Header />
-        <div className="wrapper center-column">
-          <p>Welcome to React!</p>
-        </div>
-      </>
-    );
-  }
-}
-export default About;
+export const About: React.FC = function About() {
+  return (
+    <>
+      <Header />
+      <div className="wrapper center-column">
+        <h2>Welcome to React!</h2>
+      </div>
+    </>
+  );
+};

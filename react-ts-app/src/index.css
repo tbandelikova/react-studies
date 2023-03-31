@@ -67,6 +67,11 @@ img {
   border: none;
 }
 
+.btn[disabled] {
+  background-color: #c77dff;
+  pointer-events: none;
+}
+
 .btn:hover {
   background-color: #c77dff;
 }
