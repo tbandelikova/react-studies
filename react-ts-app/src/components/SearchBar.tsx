@@ -7,12 +7,9 @@ export const SearchBar = function SearchBar(props: SearchPropsType) {
     return initialValue;
   });
 
-  const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      setSearchValue(event.target.value);
-    },
-    [searchValue]
-  );
+  const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value);
+  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

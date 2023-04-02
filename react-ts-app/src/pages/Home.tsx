@@ -9,18 +9,15 @@ import { CardPropsType } from '../types/types';
 export const Home: React.FC = function Home() {
   const [searchData, setSearchData] = useState<Array<CardPropsType>>([]);
 
-  const search = useCallback(
-    (value: string) => {
-      const searchValue = data.filter((item) => item.title.includes(value));
-      setSearchData(searchValue);
-    },
-    [searchData]
-  );
+  const search = useCallback((value: string) => {
+    const searchValue = data.filter((item) => item.title.includes(value));
+    setSearchData(searchValue);
+  }, []);
 
   useMemo(() => {
     const saved = localStorage.getItem('searchValue') || '';
     return search(saved);
-  }, []);
+  }, [search]);
 
   return (
     <>
