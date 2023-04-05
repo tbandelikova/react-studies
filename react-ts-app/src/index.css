@@ -53,18 +53,30 @@ img {
   object-fit: contain;
 }
 
-button, .tag {
+.btn, .tag {
   border-radius: 1rem;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
   transition: all .3s;
 }
-button:hover {
+
+.btn {
+  background: #5a189a;
+  color: #fefae0;
+  border: none;
+}
+
+.btn[disabled] {
+  background-color: #c77dff;
+  pointer-events: none;
+}
+
+.btn:hover {
   background-color: #c77dff;
 }
 
-button:active {
+.btn:active {
   transform: translateY(3px);
 }
 
