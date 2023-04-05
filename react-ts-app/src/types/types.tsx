@@ -1,10 +1,21 @@
-export type CardPropsType = {
+export type InitialCardPropsType = {
   id: number;
   title: string;
   img: string;
   price: string;
   text: string;
   tags: Array<string>;
+};
+
+type ImageURL = { [key: string]: string };
+
+export type APICardPropsType = {
+  id: string;
+  name: string;
+  profile_image: ImageURL;
+  total_photos: number;
+  bio: string;
+  location: string;
 };
 
 export type UserCardPropsType = {

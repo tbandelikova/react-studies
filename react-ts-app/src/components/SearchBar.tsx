@@ -17,7 +17,7 @@ export const SearchBar = function SearchBar(props: SearchPropsType) {
   };
 
   useEffect(() => {
-    localStorage.setItem('searchValue', searchValue);
+    return localStorage.setItem('searchValue', searchValue);
   }, [searchValue]);
 
   return (

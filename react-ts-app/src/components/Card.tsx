@@ -1,23 +1,19 @@
-import { CardPropsType } from '../types/types';
+import { APICardPropsType } from '../types/types';
 
-export const Card = function Card(props: CardPropsType) {
-  const { title, img, price, text, tags } = props;
+export const Card = function Card(props: APICardPropsType) {
+  const { name, profile_image, total_photos, bio, location } = props;
   return (
     <div className="card">
       <div className="card-img">
-        <img src={img} alt={title} />
+        <img src={profile_image.large} alt="profile image" />
       </div>
       <div className="card-content">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-price">{price}</p>
-        <p className="card-text">{text}</p>
-        <div className="card-tags">
-          {tags.map((tag, index) => (
-            <span className="tag" key={index}>
-              {tag}
-            </span>
-          ))}
-        </div>
+        <h5 className="card-title">{name}</h5>
+        <p className="card-text">
+          Total photos: <span className="card-price">{total_photos}</span>
+        </p>
+        <p className="card-text card-bio">{bio}</p>
+        <p className="card-text">{location}</p>
       </div>
     </div>
   );
