@@ -6,7 +6,6 @@ import { App } from './App';
 import { Card } from './components/Card';
 import { CardUser } from './components/CardUser';
 import { Forms } from './pages/Forms';
-import { InputSelect } from './components/InputSelect';
 
 describe('App', () => {
   it('Should have H1 headline', () => {
@@ -17,12 +16,52 @@ describe('App', () => {
 
 describe('Card', () => {
   it('Images should have alt-attribute', () => {
-    render(<Card id={''} name={''} profile_image={{}} total_photos={0} bio={''} location={''} />);
+    render(
+      <Card
+        id={0}
+        name={''}
+        status={''}
+        species={''}
+        type={''}
+        gender={''}
+        origin={{}}
+        image={''}
+        location={{}}
+      />
+    );
     expect(screen.getByRole('img')).toHaveAttribute('alt');
   });
   it('Card should have a title', () => {
-    render(<Card id={''} name={''} profile_image={{}} total_photos={0} bio={''} location={''} />);
+    render(
+      <Card
+        id={0}
+        name={''}
+        status={''}
+        species={''}
+        type={''}
+        gender={''}
+        origin={{}}
+        image={''}
+        location={{}}
+      />
+    );
     expect(screen.getByRole('heading')).toBeInTheDocument();
+  });
+  it('Card should have text', () => {
+    render(
+      <Card
+        id={0}
+        name={''}
+        status={''}
+        species={''}
+        type={''}
+        gender={''}
+        origin={{}}
+        image={''}
+        location={{}}
+      />
+    );
+    expect(screen.getByText(/species/gi)).toBeInTheDocument();
   });
 });
 
@@ -63,12 +102,5 @@ describe('Forms', () => {
     expect(
       screen.getByLabelText('I consent to my personal data', { selector: 'input' })
     ).toBeInTheDocument();
-  });
-});
-
-describe('InputSelect', () => {
-  it('Select input should have Belarus', () => {
-    render(<InputSelect />);
-    expect(screen.getByDisplayValue('Belarus'));
   });
 });

@@ -23,7 +23,12 @@ export const SearchBar = function SearchBar(props: SearchPropsType) {
   return (
     <form className="search-form" onSubmit={handleSubmit}>
       <label>
-        <input type="text" value={searchValue} onChange={handleChange} />
+        <input
+          type="text"
+          value={searchValue}
+          onChange={handleChange}
+          placeholder="Search by character name"
+        />
       </label>
       <button className="btn search-button" type="submit">
         Search
