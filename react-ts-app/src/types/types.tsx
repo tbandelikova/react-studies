@@ -7,15 +7,18 @@ export type InitialCardPropsType = {
   tags: Array<string>;
 };
 
-type ImageURL = { [key: string]: string };
+type DataObject = { [key: string]: string };
 
 export type APICardPropsType = {
-  id: string;
+  id: number;
   name: string;
-  profile_image: ImageURL;
-  total_photos: number;
-  bio: string;
-  location: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  origin: DataObject;
+  image: string;
+  location: DataObject;
 };
 
 export type UserCardPropsType = {

@@ -17,11 +17,11 @@ describe('App', () => {
 
 describe('Card', () => {
   it('Images should have alt-attribute', () => {
-    render(<Card id={0} title={''} img={''} price={''} text={''} tags={[]} />);
+    render(<Card id={''} name={''} profile_image={{}} total_photos={0} bio={''} location={''} />);
     expect(screen.getByRole('img')).toHaveAttribute('alt');
   });
   it('Card should have a title', () => {
-    render(<Card id={0} title={''} img={''} price={''} text={''} tags={[]} />);
+    render(<Card id={''} name={''} profile_image={{}} total_photos={0} bio={''} location={''} />);
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 });

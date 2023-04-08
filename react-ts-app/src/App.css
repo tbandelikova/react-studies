@@ -70,10 +70,16 @@
 .cards {
   width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.cards:after {
+  content: '';
+  width: 30%;
+  display: block;
 }
 
 /* Card component */
@@ -116,14 +122,12 @@
   color: #f3722c;
 }
 
-.card-text {
-  text-align: justify;
-  margin: 0.5rem 0;
+.additional {
+  display: none;
 }
 
-.card-bio {
-  height: 5rem;
-  overflow: clip auto;
+.card-text {
+  margin: 0.5rem 0;
 }
 
 .card-tags>*:not(:last-child) {
