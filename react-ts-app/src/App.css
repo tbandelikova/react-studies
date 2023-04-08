@@ -76,12 +76,6 @@
   margin-top: 2rem;
 }
 
-.cards:after {
-  content: '';
-  width: 30%;
-  display: block;
-}
-
 /* Card component */
 .card {
   flex-basis: 30%;

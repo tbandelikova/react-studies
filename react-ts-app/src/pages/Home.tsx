@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { SearchBar } from '../components/SearchBar';
 import { Card } from '../components/Card';
+import { Loader } from '../components/Loader/Loader';
 import img from '../assets/nothing.svg';
 import { APICardPropsType } from '../types/types';
 
@@ -14,15 +15,15 @@ export const Home: React.FC = function Home() {
       ? `https://rickandmortyapi.com/api/character/?name=${value}`
       : 'https://rickandmortyapi.com/api/character/';
     const res = await fetch(url);
-    let searchedValue;
     if (!res.ok) {
-      console.error(res.statusText);
+      setIsLoading(false);
+      return setSearchData([]);
     } else {
       const data = await res.json();
-      searchedValue = data.results;
+      setIsLoading(false);
+      setSearchData(data.results);
     }
     setIsLoading(false);
-    setSearchData(searchedValue);
   }, []);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export const Home: React.FC = function Home() {
       <div className="wrapper center-column">
         <SearchBar search={search} />
         <div className="cards">
-          {isLoading && <p className="card-title">Loading...</p>}
+          {isLoading && <Loader />}
           {!isLoading && !searchData.length && <img src={img} alt="No matches found..." />}
           {!isLoading && searchData.map((card) => <Card key={card.id} {...card} />)}
         </div>

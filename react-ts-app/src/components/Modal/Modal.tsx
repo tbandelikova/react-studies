@@ -1,11 +1,5 @@
-import { Dispatch, ReactElement, SetStateAction } from 'react';
+import { ModalProps } from '../../types/types';
 import './Modal.css';
-
-type ModalProps = {
-  isModal: boolean;
-  setIsModal: Dispatch<SetStateAction<boolean>>;
-  child: ReactElement;
-};
 
 export const Modal = function Modal(props: ModalProps) {
   const { isModal, setIsModal, child } = props;

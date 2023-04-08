@@ -1,3 +1,5 @@
+import { Dispatch, ReactElement, SetStateAction } from 'react';
+
 export type InitialCardPropsType = {
   id: number;
   title: string;
@@ -19,6 +21,12 @@ export type APICardPropsType = {
   origin: DataObject;
   image: string;
   location: DataObject;
+};
+
+export type ModalProps = {
+  isModal: boolean;
+  setIsModal: Dispatch<SetStateAction<boolean>>;
+  child: ReactElement;
 };
 
 export type UserCardPropsType = {
