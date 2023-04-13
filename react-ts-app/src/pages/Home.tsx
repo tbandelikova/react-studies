@@ -4,6 +4,7 @@ import { Card } from '../components/Card';
 import { Loader } from '../components/Loader/Loader';
 import img from '../assets/nothing.svg';
 import { APICardPropsType } from '../types/types';
+import fetch from 'cross-fetch';
 
 export const Home: React.FC = function Home() {
   const [searchData, setSearchData] = useState<Array<APICardPropsType>>([]);
@@ -11,9 +12,7 @@ export const Home: React.FC = function Home() {
 
   const search = useCallback(async (value: string | null) => {
     setIsLoading(true);
-    const url = value
-      ? `https://rickandmortyapi.com/api/character/?name=${value}`
-      : 'https://rickandmortyapi.com/api/character/';
+    const url = `https://rickandmortyapi.com/api/character/?name=${value}`;
     const res = await fetch(url);
     if (!res.ok) {
       setIsLoading(false);
@@ -38,7 +37,9 @@ export const Home: React.FC = function Home() {
         <SearchBar search={search} />
         <div className="cards">
           {isLoading && <Loader />}
-          {!isLoading && !searchData.length && <img src={img} alt="No matches found..." />}
+          {!isLoading && !searchData.length && (
+            <img role="no-matches" src={img} alt="No matches found..." />
+          )}
           {!isLoading && searchData.map((card) => <Card key={card.id} {...card} />)}
         </div>
       </div>

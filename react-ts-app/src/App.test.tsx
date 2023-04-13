@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { describe, it } from 'vitest';
+import userEvent from '@testing-library/user-event';
 
 import { App } from './App';
 import { Card } from './components/Card';
@@ -11,6 +12,13 @@ describe('App', () => {
   it('Should have H1 headline', () => {
     render(<App />, { wrapper: BrowserRouter });
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+  });
+  it('Should fetch posts', async () => {
+    render(<App />, { wrapper: BrowserRouter });
+    expect(screen.getByText('Search')).toBeDefined();
+    userEvent.click(screen.getByRole('button', { name: 'Search' }));
+    await waitForElementToBeRemoved(() => screen.getByRole('loader'));
+    expect(screen.getByRole('heading', { level: 5 })).toBeDefined();
   });
 });
 
@@ -61,7 +69,7 @@ describe('Card', () => {
         location={{}}
       />
     );
-    expect(screen.getByText(/species/gi)).toBeInTheDocument();
+    expect(screen.getByText(/species/i)).toBeInTheDocument();
   });
 });
 
