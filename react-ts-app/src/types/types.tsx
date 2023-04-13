@@ -1,10 +1,32 @@
-export type CardPropsType = {
+import { Dispatch, ReactElement, SetStateAction } from 'react';
+
+export type InitialCardPropsType = {
   id: number;
   title: string;
   img: string;
   price: string;
   text: string;
   tags: Array<string>;
+};
+
+type DataObject = { [key: string]: string };
+
+export type APICardPropsType = {
+  id: number;
+  name: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  origin: DataObject;
+  image: string;
+  location: DataObject;
+};
+
+export type ModalProps = {
+  isModal: boolean;
+  setIsModal: Dispatch<SetStateAction<boolean>>;
+  child: ReactElement;
 };
 
 export type UserCardPropsType = {

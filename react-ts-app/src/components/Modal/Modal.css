@@ -1,0 +1,65 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(66, 68, 90, 0.6);
+    transition: all .3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    animation: .5s 1 normal modalAction;
+}
+
+.modal {
+    background: #eaac8b;
+    background: linear-gradient(25deg, #eaac8b 0%, #5a189a 100%);
+    border-radius: 1rem 0 1rem 1rem;
+    max-width: fit-content;
+    max-height: 90%;
+    overflow: hidden;
+    padding: 2rem 1rem 1rem;
+    position: relative;
+}
+
+.modal__content>.card {
+    pointer-events: none;
+}
+
+.modal__content>.card:hover {
+    box-shadow: none;
+}
+
+.modal__content>.card .additional {
+    display: block;
+}
+
+.modal__close {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: center/cover no-repeat url('../../assets/icons8-close.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
+.modal__close:active {
+    transform: translateY(.5rem);
+}
+
+@keyframes modalAction {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

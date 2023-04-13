@@ -1,38 +1,48 @@
-import { useState, useCallback, useMemo } from 'react';
-import { Header } from '../components/Header';
+import { useState, useCallback, useEffect } from 'react';
 import { SearchBar } from '../components/SearchBar';
 import { Card } from '../components/Card';
-import data from '../assets/data.json';
+import { Loader } from '../components/Loader/Loader';
 import img from '../assets/nothing.svg';
-import { CardPropsType } from '../types/types';
+import { APICardPropsType } from '../types/types';
+import fetch from 'cross-fetch';
 
 export const Home: React.FC = function Home() {
-  const [searchData, setSearchData] = useState<Array<CardPropsType>>([]);
+  const [searchData, setSearchData] = useState<Array<APICardPropsType>>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const search = useCallback((value: string) => {
-    const searchValue = data.filter((item) => item.title.includes(value));
-    setSearchData(searchValue);
+  const search = useCallback(async (value: string | null) => {
+    setIsLoading(true);
+    const url = `https://rickandmortyapi.com/api/character/?name=${value}`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      setIsLoading(false);
+      return setSearchData([]);
+    } else {
+      const data = await res.json();
+      setIsLoading(false);
+      setSearchData(data.results);
+    }
+    setIsLoading(false);
   }, []);
 
-  useMemo(() => {
+  useEffect(() => {
+    setIsLoading(true);
     const saved = localStorage.getItem('searchValue') || '';
-    return search(saved);
+    setTimeout(() => search(saved), 1000);
   }, [search]);
 
   return (
-    <>
-      <Header />
-      <main>
-        <div className="wrapper center-column">
-          <SearchBar search={search} />
-          <div className="cards">
-            {!searchData.length && <img src={img} alt="No matches found..." />}
-            {searchData.map((card) => (
-              <Card {...card} key={card.id} />
-            ))}
-          </div>
+    <main>
+      <div className="wrapper center-column">
+        <SearchBar search={search} />
+        <div className="cards">
+          {isLoading && <Loader />}
+          {!isLoading && !searchData.length && (
+            <img role="no-matches" src={img} alt="No matches found..." />
+          )}
+          {!isLoading && searchData.map((card) => <Card key={card.id} {...card} />)}
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
