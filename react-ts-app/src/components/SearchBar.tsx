@@ -1,24 +1,23 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { SearchPropsType } from '../types/types';
+import React, { useCallback } from 'react';
+import { useAppSelector, useAppDispatch } from '../redux/hooks';
+import { searchValueState } from '../redux/searchSlice';
+import { fetchCards } from '../redux/searchAction';
 
-export const SearchBar = function SearchBar(props: SearchPropsType) {
-  const [searchValue, setSearchValue] = useState(() => {
-    const initialValue = localStorage.getItem('searchValue') || '';
-    return initialValue;
-  });
+export const SearchBar: React.FC = function SearchBar() {
+  const searchValue = useAppSelector((state) => state.search.value);
+  const dispatch = useAppDispatch();
 
-  const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event.target.value);
-  }, []);
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      dispatch(searchValueState(event.target.value));
+    },
+    [dispatch]
+  );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.search(searchValue);
+    dispatch(fetchCards());
   };
-
-  useEffect(() => {
-    return localStorage.setItem('searchValue', searchValue);
-  }, [searchValue]);
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
