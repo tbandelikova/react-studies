@@ -20,6 +20,15 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 0,
     'react-hooks/rules-of-hooks': 'error',
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        extendDefaults: true,
+        types: {
+          '{}': false,
+        },
+      },
+    ],
     'react-hooks/exhaustive-deps': 'warn',
   },
   settings: {

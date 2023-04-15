@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { APICardPropsType } from '../types/types';
 
-interface SearchState {
+export interface SearchState {
   value: string;
   isError: boolean;
   isLoading: boolean;

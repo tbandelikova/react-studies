@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { UserCardPropsType } from '../types/types';
 
-interface FormState {
+export interface FormState {
   users: Array<UserCardPropsType>;
   isLoading: boolean;
 }
@@ -19,7 +19,7 @@ export const formSlice = createSlice({
     getCardsAction: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
     },
-    getCardsSuccessAction: (state, action: PayloadAction<UserCardPropsType>) => {
+    getSuccessAction: (state, action: PayloadAction<UserCardPropsType>) => {
       state.isLoading = false;
       state.users = [...state.users, action.payload];
     },
@@ -29,6 +29,6 @@ export const formSlice = createSlice({
   },
 });
 
-export const { getCardsAction, getCardsSuccessAction, getCardsDeletedAction } = formSlice.actions;
+export const { getCardsAction, getSuccessAction, getCardsDeletedAction } = formSlice.actions;
 
 export default formSlice.reducer;

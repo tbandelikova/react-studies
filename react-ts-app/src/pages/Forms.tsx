@@ -9,7 +9,7 @@ import InputCheckbox from '../components/InputCheckbox';
 import { CardUser } from '../components/CardUser';
 import { Loader } from '../components/Loader/Loader';
 import { IFormInput } from '../types/types';
-import { getCardsAction, getCardsSuccessAction, getCardsDeletedAction } from '../redux/formSlice';
+import { getCardsAction, getSuccessAction, getCardsDeletedAction } from '../redux/formSlice';
 
 export const Forms: React.FC = function Forms() {
   const { users, isLoading } = useAppSelector((state) => state.form);
@@ -36,7 +36,7 @@ export const Forms: React.FC = function Forms() {
         gender: data.gender,
         img: image ? image : 'src/assets/secondImg.svg',
       };
-      dispatch(getCardsSuccessAction(userData));
+      dispatch(getSuccessAction(userData));
       reset();
     }
     dispatch(getCardsAction(false));
