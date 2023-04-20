@@ -1,22 +1,20 @@
-import React, { useCallback } from 'react';
+import React, { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../redux/hooks';
 import { searchValueState } from '../redux/searchSlice';
-import { fetchCards } from '../redux/searchAction';
 
 export const SearchBar: React.FC = function SearchBar() {
   const searchValue = useAppSelector((state) => state.search.value);
   const dispatch = useAppDispatch();
 
-  const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      dispatch(searchValueState(event.target.value));
-    },
-    [dispatch]
-  );
+  const [value, setValue] = useState(searchValue || '');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch(fetchCards());
+    dispatch(searchValueState(value));
   };
 
   return (
@@ -24,7 +22,7 @@ export const SearchBar: React.FC = function SearchBar() {
       <label>
         <input
           type="text"
-          value={searchValue}
+          value={value}
           onChange={handleChange}
           placeholder="Search by character name"
         />

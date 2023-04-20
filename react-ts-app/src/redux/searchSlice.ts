@@ -4,15 +4,11 @@ import { APICardPropsType } from '../types/types';
 
 export interface SearchState {
   value: string;
-  isError: boolean;
-  isLoading: boolean;
   searchResult: Array<APICardPropsType>;
 }
 
 const initialState: SearchState = {
   value: '',
-  isError: false,
-  isLoading: false,
   searchResult: [],
 };
 
@@ -23,27 +19,12 @@ export const searchSlice = createSlice({
     searchValueState: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
     },
-    getCardsRequestAction: (state) => {
-      state.isLoading = true;
-    },
     getCardsSuccessAction: (state, action: PayloadAction<Array<APICardPropsType>>) => {
-      state.isLoading = false;
-      state.isError = false;
       state.searchResult = action.payload;
-    },
-    getCardsFailedAction: (state) => {
-      state.isLoading = false;
-      state.isError = true;
-      state.searchResult = initialState.searchResult;
     },
   },
 });
 
-export const {
-  searchValueState,
-  getCardsRequestAction,
-  getCardsSuccessAction,
-  getCardsFailedAction,
-} = searchSlice.actions;
+export const { searchValueState, getCardsSuccessAction } = searchSlice.actions;
 
 export default searchSlice.reducer;

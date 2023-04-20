@@ -8,7 +8,7 @@ export const Card = function Card(props: APICardPropsType) {
   const { name, image, status, species, type, gender, origin, location } = props;
   return (
     <>
-      <div className="card" onClick={() => setIsModal(true)}>
+      <div role="card" className="card" onClick={() => setIsModal(true)}>
         <div className="card-img">
           <img src={image} alt={`${name}-image`} />
         </div>

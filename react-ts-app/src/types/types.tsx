@@ -11,6 +11,16 @@ export type InitialCardPropsType = {
 
 type DataObject = { [key: string]: string };
 
+export interface SearchData {
+  info: {
+    count: number;
+    pages: number;
+    next: string;
+    prev: string | null;
+  };
+  results: Array<APICardPropsType>;
+}
+
 export type APICardPropsType = {
   id: number;
   name: string;
