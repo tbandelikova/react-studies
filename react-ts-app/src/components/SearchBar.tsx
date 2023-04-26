@@ -1,31 +1,28 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { SearchPropsType } from '../types/types';
+import React, { useState } from 'react';
+import { useAppSelector, useAppDispatch } from '../redux/hooks';
+import { searchValueState } from '../redux/searchSlice';
 
-export const SearchBar = function SearchBar(props: SearchPropsType) {
-  const [searchValue, setSearchValue] = useState(() => {
-    const initialValue = localStorage.getItem('searchValue') || '';
-    return initialValue;
-  });
+export const SearchBar: React.FC = function SearchBar() {
+  const searchValue = useAppSelector((state) => state.search.value);
+  const dispatch = useAppDispatch();
 
-  const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event.target.value);
-  }, []);
+  const [value, setValue] = useState(searchValue || '');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    props.search(searchValue);
+    dispatch(searchValueState(value));
   };
-
-  useEffect(() => {
-    return localStorage.setItem('searchValue', searchValue);
-  }, [searchValue]);
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
       <label>
         <input
           type="text"
-          value={searchValue}
+          value={value}
           onChange={handleChange}
           placeholder="Search by character name"
         />

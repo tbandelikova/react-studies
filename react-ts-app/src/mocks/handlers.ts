@@ -1,5 +1,10 @@
 import { rest } from 'msw';
 
+/**
+ * An unhandled error occurred processing a request for the endpoint "getCharByName".
+In the case of an unhandled error, no tags will be "provided" or "invalidated". ReferenceError: Request is not defined
+ */
+
 const fakeCard = {
   id: 2,
   name: '',
@@ -22,7 +27,7 @@ const fakeCard = {
 };
 
 export const handlers = [
-  rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
+  rest.get('https://rickandmortyapi.com/api/character/', (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({

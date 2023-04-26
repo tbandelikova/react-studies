@@ -139,12 +139,19 @@
 /* Forms page */
 .formcontainer {
   width: 50%;
+  min-width: 25rem;
   align-self: flex-start;
   border-radius: 1rem;
   border: 1px dashed #2b2d42;
   padding: 1rem;
   background: #eaac8b;
   background: linear-gradient(180deg, #eaac8b 0%, #f1e8bd 100%);
+}
+
+.top-part {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form {
