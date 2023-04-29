@@ -1,18 +1,24 @@
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import { BrowserRouter } from 'react-router-dom';
+import { RenderToPipeableStreamOptions, renderToPipeableStream } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom/server';
 import { App } from './App';
 import { Provider } from 'react-redux';
 import { setupStore } from './redux/store';
+import { cardsApi } from './redux/searchCardsApi';
 
-export function render() {
+export async function render(url: string, options: RenderToPipeableStreamOptions) {
   const store = setupStore({});
-  const html = ReactDOMServer.renderToPipeableStream(
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+  await Promise.all(store.dispatch(cardsApi.util.getRunningQueriesThunk()));
+
+  const html = renderToPipeableStream(
+    <React.StrictMode>
+      <Provider store={store}>
+        <StaticRouter location={url}>
+          <App />
+        </StaticRouter>
+      </Provider>
+    </React.StrictMode>,
+    options
   );
   return { html };
 }
